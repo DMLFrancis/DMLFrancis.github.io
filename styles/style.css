@@ -1,32 +1,167 @@
-body{
-	font-family: Arial;
-	background-color: #f2f2f2;
+/* Remove default margin */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #6a85f1, #8d54ff, #c86dd7);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
 }
 
-h1{
-	text-align: center;
-	color: black;
+/* Animated gradient */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-#header{
-	width: 50%;
-	margin: 20px auto;
-	background-color: white;
-	padding: 30px;
-	border-radius: 15px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+/* Fullscreen center */
+.hero-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 }
 
-.link{
-	margin-bottom: 10px;
+/* Dark glass card */
+.hero-card {
+    background: rgba(15, 18, 40, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
 }
 
-.link a{
-	text-decoration: none;
-	color: #3498db;
-	font-weight: bold;
+/* Typography */
+.intro {
+    opacity: 0.8;
+    font-size: 18px;
 }
 
-.link a:hover{
-	color:red;
+.name {
+    font-size: 56px;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 26px;
+    margin-right: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, #8d54ff, #6a85f1);
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(141,84,255,0.4);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px);
+}
+
+.student {
+    margin-top: 40px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* ===== Labs page styling (uses same hero-wrapper / hero-card) ===== */
+
+.page-title{
+  margin: 8px 0 10px;
+  font-size: 40px;
+}
+
+.page-subtitle{
+  margin: 0 0 22px;
+  opacity: 0.8;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.labs-list{
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.lab-item{
+  display: block;
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lab-item:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.footer-actions{
+  margin-top: 26px;
+}
+
+/* ===== InvestFlex media styling ===== */
+
+.section-heading{
+  margin: 30px 0 15px;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.media-section{
+  margin-top: 20px;
+}
+
+.media-video{
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.media-pdf{
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }

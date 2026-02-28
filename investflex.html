@@ -2,31 +2,42 @@
 <html>
 <head>
   <link rel="icon" type="images/x-icon" href="images/Dean Photo.jpeg" />
-  <title>InvestFlex Video Presentation</title>
+  <title>InvestFlex Presentation</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <h1>InvestFlex Video Presentation</h1>
+  <div class="hero-wrapper">
+    <div class="hero-card">
 
-  <div style="text-align:center;">
-    <video width="800" controls>
-      <source src="Video Presentation/Video Presentation.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
+      <h1 class="page-title">InvestFlex</h1>
+      <p class="page-subtitle">
+        Video demonstration and accompanying presentation slides.
+      </p>
+
+      <!-- Video Section -->
+      <div class="media-section">
+        <h3 class="section-heading">Video Presentation</h3>
+        <video class="media-video" controls>
+          <source src="Video Presentation/Video Presentation.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- PDF Section -->
+      <div class="media-section">
+        <h3 class="section-heading">Presentation Slides</h3>
+        <iframe class="media-pdf"
+                src="InvestFlex.pdf"
+                type="application/pdf">
+        </iframe>
+      </div>
+
+      <div class="footer-actions">
+        <a class="secondary-btn" href="index.html">← Back to Home</a>
+      </div>
+
+    </div>
   </div>
-
-  <br/>
-
-  <div style="text-align:center;">
-    <a href="index.html">← Back to Home</a>
-  </div>
-  <br/>
-  <div style="text-align:center;">
-  <iframe src="InvestFlex.pdf"
-          width="900"
-          height="600">
-  </iframe>
-</div>
 </body>
 </html>
